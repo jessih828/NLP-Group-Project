@@ -37,7 +37,17 @@ except Exception as e:
     stop_words = set()
 
 # Load pre-trained SpaCy model for NER
-nlp = spacy.load('en_core_web_sm')
+
+import subprocess
+
+def download_spacy_model(model_name="en_core_web_sm"):
+    try:
+        spacy.load(model_name)
+    except OSError:
+        subprocess.run(["python", "-m", "spacy", "download", model_name])
+    return spacy.load(model_name)
+
+nlp = download_spacy_model('en_core_web_sm')
 
 # Define a simple list of skills for demonstration purposes
 skill_set = {"python", "data analysis", "machine learning", "project management", "communication"}
