@@ -40,13 +40,17 @@ except Exception as e:
 
 import subprocess
 
+# Function to download and load SpaCy model
 def download_spacy_model(model_name="en_core_web_sm"):
     try:
-        spacy.load(model_name)
+        nlp = spacy.load(model_name)
     except OSError:
-        subprocess.run(["python", "-m", "spacy", "download", model_name])
-    return spacy.load(model_name)
+        st.info(f"Downloading SpaCy model {model_name}...")
+        subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
+        nlp = spacy.load(model_name)
+    return nlp
 
+# Load pre-trained SpaCy model for NER
 nlp = download_spacy_model('en_core_web_sm')
 
 # Define a simple list of skills for demonstration purposes
