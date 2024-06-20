@@ -1,0 +1,9 @@
+streamlit
+pandas
+pdfplumber
+sentence-transformers
+torch
+nltk
+spacy
+keybert
+openai
