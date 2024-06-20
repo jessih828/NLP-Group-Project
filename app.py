@@ -46,12 +46,19 @@ def download_spacy_model(model_name="en_core_web_sm"):
         nlp = spacy.load(model_name)
     except OSError:
         st.info(f"Downloading SpaCy model {model_name}...")
-        subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
-        nlp = spacy.load(model_name)
+        try:
+            subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
+            nlp = spacy.load(model_name)
+        except subprocess.CalledProcessError as e:
+            st.error(f"Error downloading SpaCy model: {e}")
+            raise
     return nlp
 
 # Load pre-trained SpaCy model for NER
-nlp = download_spacy_model('en_core_web_sm')
+try:
+    nlp = download_spacy_model('en_core_web_sm')
+except Exception as e:
+    st.error(f"Failed to load SpaCy model: {e}")
 
 # Define a simple list of skills for demonstration purposes
 skill_set = {"python", "data analysis", "machine learning", "project management", "communication"}
