@@ -24,7 +24,7 @@ def display_job_match(index, job_details, similarities):
 
 
 def page_dataset_comparison():
-    st.image('/Users/bernardonobrepalma/Desktop/IE/3rd Term/NLP/Final Project - NLP/image_banner.png', use_column_width=True)
+    st.image('image_banner.png', use_column_width=True)
     st.title("Looking for a job? Let's find the best match!")
     st.write("Upload your CV and find the top matching job descriptions from our dataset.")
 
@@ -69,7 +69,7 @@ def page_dataset_comparison():
     
 # Page for comparing a CV against a single job posting
 def page_single_comparison():
-    st.image('/Users/bernardonobrepalma/Desktop/IE/3rd Term/NLP/Final Project - NLP/image_banner.png', use_column_width=True)
+    st.image('image_banner.png', use_column_width=True)
     st.title("CV vs Job Posting Comparison")
     st.write("Upload your CV and a job posting to see if you're a good fit.")
     
@@ -112,7 +112,7 @@ def page_single_comparison():
 
 # Page for enhancing CV based on job posting
 def page_enhance_cv():
-    st.image('/Users/bernardonobrepalma/Desktop/IE/3rd Term/NLP/Final Project - NLP/image_banner.png', use_column_width=True)
+    st.image('image_banner.png', use_column_width=True)
     st.title("Enhance my CV")
     st.write("Upload your CV and the job posting to get suggestions on how to improve your CV to match the job posting.")
 
@@ -174,7 +174,7 @@ def page_enhance_cv():
 
 # Page for generating interview questions based on job description
 def page_interview_questions():
-    st.image('/Users/bernardonobrepalma/Desktop/IE/3rd Term/NLP/Final Project - NLP/image_banner.png', use_column_width=True)
+    st.image('image_banner.png', use_column_width=True)
     st.title("Interview Question Generator")
     st.write("Upload a job posting to generate potential interview questions based on the job description.")
     
