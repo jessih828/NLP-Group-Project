@@ -22,3 +22,11 @@ Rephraise was created to address the challenges of finding a job in a competitiv
 
 ## Additional Features
 - **Real-Time Job Listings:** Integrates scraping capabilities to fetch real-time job listings from platforms like LinkedIn, further supporting job seekers in their search for relevant positions.
+
+## How to Use
+
+1. **Go to the `test.ipynb` notebook:**
+   - Open the `test.ipynb` file in your preferred Jupyter Notebook environment.
+
+2. **Run the cells:**
+   - Execute the cells sequentially to see how Rephraiser processes and analyzes your CV against job descriptions.
