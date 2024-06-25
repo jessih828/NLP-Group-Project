@@ -2,6 +2,7 @@
 
 Rephraise was created to address the challenges of finding a job in a competitive market. In 2024, the job market is particularly tough, and it's crucial to enhance our chances by improving our CVs and speeding up the job search process. By leveraging NLP, we want to analyzes and matches CVs with job descriptions, ensuring that job seekers present their qualifications in the best possible light.
 
+<img width="732" alt="README_picture" src="https://github.com/jessih828/NLP-Resume-Job-Match/assets/147946414/5654129a-1832-453c-988e-a47f5b70b801">
 
 ## Core Functionalities
 
